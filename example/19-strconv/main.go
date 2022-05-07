@@ -9,6 +9,7 @@ func main() {
 	f, _ := strconv.ParseFloat("1.234", 64)
 	fmt.Println(f) // 1.234
 
+	// 字符串 进制 目标类型
 	n, _ := strconv.ParseInt("111", 10, 64)
 	fmt.Println(n) // 111
 

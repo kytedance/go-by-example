@@ -12,7 +12,9 @@ func main() {
 	t2 := time.Date(2022, 3, 27, 2, 30, 36, 0, time.UTC)
 	fmt.Println(t)                                                  // 2022-03-27 01:25:36 +0000 UTC
 	fmt.Println(t.Year(), t.Month(), t.Day(), t.Hour(), t.Minute()) // 2022 March 27 1 25
-	fmt.Println(t.Format("2006-01-02 15:04:05"))                    // 2022-03-27 01:25:36
+	// golang 使用特定的时间模板字符串来格式化时间，这一点与其他语言 yyyy mm dd 不同
+	fmt.Println(t.Format("2006-01-02 15:04:05")) // 2022-03-27 01:25:36
+	// 获取两个时间的时间间隔
 	diff := t2.Sub(t)
 	fmt.Println(diff)                           // 1h5m0s
 	fmt.Println(diff.Minutes(), diff.Seconds()) // 65 3900
@@ -20,6 +22,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(t3 == t)    // true
+	fmt.Println(t3 == t) // true
+	// Unix 时间戳
 	fmt.Println(now.Unix()) // 1648738080
 }

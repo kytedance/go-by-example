@@ -10,9 +10,21 @@ type user struct {
 	password string
 }
 
+// bool      -> false
+// numbers   -> 0
+// string    -> ""
+// pointers -> nil
+// slices -> nil
+// maps -> nil
+// channels -> nil
+// functions -> nil
+// interfaces -> nil
+
+// 直接在函数返回值中返回错误
 func findUser(users []user, name string) (v *user, err error) {
 	for _, u := range users {
 		if u.name == name {
+			// 没有错误返回 nil
 			return &u, nil
 		}
 	}

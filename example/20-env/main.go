@@ -12,6 +12,7 @@ func main() {
 	fmt.Println(os.Getenv("PATH")) // /usr/local/go/bin...
 	fmt.Println(os.Setenv("AA", "BB"))
 
+	// 使用 go 执行命令行
 	buf, err := exec.Command("grep", "127.0.0.1", "/etc/hosts").CombinedOutput()
 	if err != nil {
 		panic(err)
