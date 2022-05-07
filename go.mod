@@ -1,3 +1,3 @@
-module github.com/wangkechun/go-by-example
+module github.com/kytedance/go-by-example
 
 go 1.18
